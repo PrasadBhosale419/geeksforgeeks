@@ -1,0 +1,45 @@
+#1 Searching an element in non sorted array
+
+def searching(arr,key):
+    for i in range(len(arr)):
+        if arr[i]==key:
+            return i
+    
+    
+arr=[1,23,4,5,67]
+key=5
+result=searching(arr,key)
+print("The position of the key is"+str(result))
+
+#2Inserting an element in non sorted array
+
+def inserting(arr,position,key):
+    for i in range(len(arr)):
+        if i==position:
+            arr[i]=key
+            break
+    return arr
+    
+    
+arr=[1,23,4,5,67]
+key=69
+position=3
+result=inserting(arr,position,key)
+print("The position of the key is"+str(result))
+
+#3 Deleting an element from array in a non sorted array
+
+def deleting(arr,position):
+    for i in range(len(arr)):
+        if i==position:
+            c=arr[0:i]+arr[i+1:]
+            break
+    return c
+    
+    
+arr=[1,23,4,5,67]
+#key=69
+position=2
+result=deleting(arr,position)
+print("The position of the key is"+str(result))
+s
