@@ -33,6 +33,7 @@ def deleting(arr,position):
     for i in range(len(arr)):
         if i==position:
             c=arr[0:i]+arr[i+1:]
+          
             break
     return c
     
@@ -43,3 +44,47 @@ position=2
 result=deleting(arr,position)
 print("The position of the key is"+str(result))
 s
+
+#Linear search
+def linear_search(a,key):
+    for i in range(len(a)):
+        if a[i]==key:
+            print("The index of the key is",i)
+        else:
+            print("There's no such element in the array")
+
+linear_search([5,6,12,4,8],8)
+
+#Binary search
+def binary_search(a,key):
+    s=0
+    e=len(a)
+    while(s<=e):
+        mid=int((s+e)/2)
+        
+        if(a[mid]==key):
+            return mid
+        elif(key<a[mid]):
+            e=mid-1
+        else:
+            s=mid+1
+    return -1
+
+c=binary_search([23,34,54,64,87,91,95],87)
+print(c)
+
+#Selection Sort
+
+def sorting(a):
+    temp=0
+    for i in range(0,len(a)):
+        for j in range(i+1,len(a)):
+            if(a[i]>a[j]):
+                temp=a[i]
+                a[i]=a[j]
+                a[j]=temp
+                
+    for i in range(len(a)):
+        print(a[i])
+    
+sorting([34,12,67,45,56,14])
