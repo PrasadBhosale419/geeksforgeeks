@@ -1,0 +1,34 @@
+#Incrementting the pointer
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+void increment(int *a){
+    (*a)++;
+}
+
+int main(){
+    int a;
+    cin>>a;
+    increment(&a);
+    cout<<"The modified value of a is:"<<a;
+}
+
+#Swapping numbers using pointers
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+void swap(int *a,int *b){
+    int temp=*a;
+    *a=*b;
+    *b=temp;
+    
+}
+
+int main(){
+    int a,b;
+    cin>>a>>b;
+    swap(&a,&b);
+    cout<<"The modified values of a and b are:"<<a<<b;
+}
