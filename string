@@ -1,0 +1,19 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+int main(){
+    //string str;
+    //getline(cin,str);
+    //cout<<str;
+    //appending 
+    //string s1="fam";
+    //string s2="ily";
+    //cout<<s1+s2;
+    //cout<<s1[0];
+    //s1.clear();
+    //cout<<s1;
+    string s1="abc";
+    string s2="abc";
+    cout<<s1.compare(s2);
+}
