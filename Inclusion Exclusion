@@ -1,0 +1,32 @@
+#GCD of 2 numbers and finding the number of divisibles in a given range
+
+#include <iostream>
+
+using namespace std;
+
+int GCD(int a, int b){
+    while(b!=0){
+        int rem=a%b;
+        a=b;
+        b=rem;
+    }
+    return a;
+}
+
+int divisibles(int a, int b,int n){
+    int c1=n/a;
+    int c2=n/b;
+    int c3=n/(a*b);
+    
+    return c1+c2-c3;
+} 
+
+int main()
+{
+    int c =GCD(42,24);
+    cout<<c<<endl;
+    int d=divisibles(5,7,40);
+    cout<<"The number of divisibles are:"<<d;
+
+    return 0;
+}
